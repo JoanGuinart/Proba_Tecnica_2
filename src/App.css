@@ -53,16 +53,14 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
 }
 
 .product {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1rem;
   background-color: white;
   color: rgb(0, 0, 0);
   border-radius: 0.5rem;
