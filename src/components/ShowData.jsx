@@ -3,9 +3,7 @@ import useFetch from "../customHooks/useFetch";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCartOrUpdateQuantity } from "../actions/Actions";
 import { FiShoppingCart } from "react-icons/fi";
-import Carrito from "./Carrito";
 import { Link } from "react-router-dom";
-import ProductDetails from "./productDetails";
 
 function ShowData() {
   const { data, error } = useFetch("https://fakestoreapi.com/products");
@@ -33,7 +31,7 @@ function ShowData() {
       <h1>Shopping with REDUX</h1>
       <div className="product-grid">
         {error && <div>Error: {error}</div>}
-        <ul className={`gridShowData`}>
+        <div className={`gridShowData`}>
           {data &&
             data.map((product) => (
               <div key={product.id} className="product">
@@ -56,7 +54,7 @@ function ShowData() {
                 </button>
               </div>
             ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
