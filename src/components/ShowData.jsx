@@ -12,7 +12,7 @@ function ShowData() {
 
   const cartItems = useSelector((state) => state.cartItems);
   const dispatch = useDispatch();
-  
+
   const handleAddToCart = (product) => {
     dispatch(addToCartOrUpdateQuantity(product));
   };
@@ -37,8 +37,16 @@ function ShowData() {
           {data &&
             data.map((product) => (
               <div key={product.id} className="product">
-                <Link to={`/product/${product.id}`} key={product.id}>
+                <Link
+                  className="LinkShowData"
+                  to={`/product/${product.id}`}
+                  key={product.id}
+                >
+                  <div className="overlay">
+                    <p>Haz clic para ver más</p>
+                  </div>
                   <img src={product.image} alt={product.title} />
+
                   <h5>{product.title}</h5>
                   <h4>{product.price} €</h4>
                   <h5>Stock: {product.rating.count}</h5>
