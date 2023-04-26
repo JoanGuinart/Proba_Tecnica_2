@@ -58,7 +58,8 @@
 .product {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
   align-items: center;
   text-align: center;
   background-color: white;
@@ -77,10 +78,14 @@
 
 .product h5 {
   margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .product h4 {
   margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .product button {
