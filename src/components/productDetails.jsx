@@ -24,7 +24,7 @@ export default function ProductDetails() {
         <div>
           <h3>{data.title}</h3>
           <h5>{data.description}</h5>
-          <img src={data.image} alt={data.title} style={{ width: "25%" }} />
+          <img src={data.image} alt={data.title} className="imageData" />
           <h5>{data.price}€</h5>
           <p>Categoria: {data.category}</p>
           <p>Rating: {data.rating.rate}</p>

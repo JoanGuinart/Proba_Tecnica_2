@@ -41,9 +41,9 @@ function ShowData() {
                   key={product.id}
                 >
                   <div className="overlay">
-                    <p>Haz clic para ver más</p>
+                    <p>Haz click para ver más</p>
                   </div>
-                  <img src={product.image} alt={product.title} />
+                  <img className="imageData" src={product.image} alt={product.title} />
 
                   <h5>{product.title}</h5>
                   <h4>{product.price} €</h4>

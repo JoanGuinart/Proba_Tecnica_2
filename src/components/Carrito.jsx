@@ -33,7 +33,7 @@ function Carrito() {
           {cartItems.map((item) => (
             <div key={item.id} className="product">
               <h3>{item.title}</h3>
-              <img src={item.image} />
+              <img src={item.image}  className="imageData"/>
               <p>Precio: {item.price} €</p>
                 Cantidad:
               <div>
