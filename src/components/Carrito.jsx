@@ -29,7 +29,7 @@ function Carrito() {
       {cartItems.length === 0 ? (
         <p>No hay items en el carrito.</p>
       ) : (
-        <div className="gridShowCarrito">
+        <div className="gridShowData">
           {cartItems.map((item) => (
             <div key={item.id} className="product">
               <h3>{item.title}</h3>
