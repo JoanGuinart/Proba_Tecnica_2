@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, updateCartQuantity } from "../actions/Actions";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 function Carrito() {
   const cartItems = useSelector((state) => state.cartItems);
@@ -33,9 +32,9 @@ function Carrito() {
           {cartItems.map((item) => (
             <div key={item.id} className="product">
               <h3>{item.title}</h3>
-              <img src={item.image}  className="imageData"/>
+              <img src={item.image} className="imageData" />
               <p>Precio: {item.price} €</p>
-                Cantidad:
+              Cantidad:
               <div>
                 <button
                   onClick={() => handleQuantityChange(item.quantity - 1, item)}
@@ -43,10 +42,12 @@ function Carrito() {
                   -
                 </button>
                 <input
+                className="inputCarrito"
                   type="number"
                   min="0"
                   value={item.quantity}
                   onChange={(event) => handleQuantityChange(event, item)}
+                  disabled
                 />
                 <button
                   onClick={() => handleQuantityChange(item.quantity + 1, item)}
